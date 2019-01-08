@@ -41,7 +41,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (mConfiguration == null && bundle != null) {
             mConfiguration = bundle.getParcelable(EXTRA_CONFIGURATION);
         }
-
         if (mConfiguration == null) {
             finish();
         } else {

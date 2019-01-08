@@ -176,5 +176,8 @@ public class MediaPreviewFragment extends BaseFragment implements ViewPager.OnPa
         super.onDestroyView();
         mPagerPosition = 0;
         RxBus.getDefault().post(new CloseMediaViewPageFragmentEvent());
+        if (mMediaActivity!=null){
+            mMediaActivity=null;
+        }
     }
 }

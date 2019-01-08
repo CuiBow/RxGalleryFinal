@@ -859,7 +859,9 @@ public class MediaGridFragment extends BaseFragment implements MediaGridView, Re
         super.onDestroyView();
         RxBus.getDefault().remove(mMediaCheckChangeDisposable);
         RxBus.getDefault().remove(mCloseMediaViewPageFragmentDisposable);
-
+        if (mMediaActivity!=null){
+            mMediaActivity=null;
+        }
     }
 
     /**
@@ -882,4 +884,5 @@ public class MediaGridFragment extends BaseFragment implements MediaGridView, Re
             setImageStoreCropDir(mImageStoreCropDir);
         }
     }
+
 }

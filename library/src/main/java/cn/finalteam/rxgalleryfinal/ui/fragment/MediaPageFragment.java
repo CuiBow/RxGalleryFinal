@@ -209,5 +209,8 @@ public class MediaPageFragment extends BaseFragment implements ViewPager.OnPageC
         mItemClickPosition = 0;
         RxBus.getDefault().removeStickyEvent(OpenMediaPageFragmentEvent.class);
         RxBus.getDefault().post(new CloseMediaViewPageFragmentEvent());
+        if (mMediaActivity!=null){
+            mMediaActivity=null;
+        }
     }
 }
